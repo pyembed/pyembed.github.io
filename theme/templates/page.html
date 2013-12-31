@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {% if SITENAME == page.title %}
+    {{ SITENAME }}
+  {% else %}
+    {{SITENAME}} - {{ page.title }}
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <div class="page-header">
+    <h1>{{ page.title }}</h1>
+  </div>
+
+  {% if page.toc %}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="hidden-print" role="complementary">
+            {{ page.toc }}
+          </div>
+        </div>
+        <div class="col-md-9">{{ page.content }}</div>
+      </div>
+    </div>
+  {% else %}
+    {{ page.content }}
+  {% endif %}
+{% endblock %}
