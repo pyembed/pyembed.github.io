@@ -1,0 +1,18 @@
+branches:
+  only:
+    - source
+language: python
+python:
+  - 2.7
+install:
+  - pip install pelican rembed-markdown
+before_script:
+  - git clone https://github.com/rembed/rembed.github.io.git output
+script:
+  - pelican content -s publishconf.py
+after_success:
+  - cd output
+  - chmod 600 .travis/deploy_key.pem
+  - ssh-add .travis/deploy_key.pem
+  - git remote add deploy git@github.com:rembed/rembed.github.io.git
+  - git push deploy
