@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>    REmbed - Markdown
+</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="http://rembed.github.io/theme/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://rembed.github.io/theme/css/main.css">
+  </head>
+
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="http://rembed.github.io/" class="navbar-brand">REmbed</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Markdown<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://rembed.github.io/markdown/">Introduction</a></li>
+                <li><a href="http://rembed.github.io/markdown/examples/">Examples</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://rembed.github.io/license/">License</a></li>
+            <li><a href="https://github.com/rembed/">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+  <div class="page-header">
+    <h1>Markdown</h1>
+  </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="hidden-print" role="complementary">
+            <div class="toc">
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a><ul>
+<li><a href="#standalone">Standalone</a></li>
+<li><a href="#pelican">Pelican</a></li>
+</ul>
+</li>
+<li><a href="#syntax">Syntax</a><ul>
+<li><a href="#basics">Basics</a></li>
+<li><a href="#parameters">Parameters</a></li>
+</ul>
+</li>
+</ul>
+</div>
+          </div>
+        </div>
+        <div class="col-md-9">
+<p>REmbed is available as an extension to <a href="http://pythonhosted.org/Markdown/">Python-Markdown</a>.  Embedding content is then a simple matter of using the special <code>[!embed]</code> link tag.  For example:</p>
+<pre><code>[!embed](http://www.youtube.com/watch?v=9bZkp7q19f0)
+</code></pre>
+<p>More examples can be seen on the <a href="examples/">examples page</a>.</p>
+<h2 id="installation">Installation</h2>
+<p>REmbed-Markdown can be installed using <a href="http://www.pip-installer.org/">pip</a>.</p>
+<pre><code>pip install rembed-markdown
+</code></pre>
+<h2 id="usage">Usage</h2>
+<h3 id="standalone">Standalone</h3>
+<p>REmbed-Markdown can be passed as a standard extension to Python-Markdown:</p>
+<pre><code>&gt;&gt;&gt; import markdown
+&gt;&gt;&gt; from rembed.markdown.extension import REmbedExtension
+&gt;&gt;&gt; html = markdown.markdown(text, extensions=[REmbedExtension()])
+</code></pre>
+<h3 id="pelican">Pelican</h3>
+<p>If you're using <a href="http://docs.getpelican.com/">Pelican</a>, simply add these lines to your pelicanconf.py file:</p>
+<pre><code>from rembed.markdown.extension import REmbedExtension
+MD_EXTENSIONS = [REmbedExtension()]
+</code></pre>
+<h2 id="syntax">Syntax</h2>
+<h3 id="basics">Basics</h3>
+<p>The default syntax for embedding is to create a link with text <code>!embed</code>, and the URL of the content to embed.</p>
+<p>For example, this source:</p>
+<pre><code>[!embed](http://www.youtube.com/watch?v=9bZkp7q19f0)
+</code></pre>
+<p>will result in the following HTML output:</p>
+<pre><code>&lt;iframe width="480" height="270" src="http://www.youtube.com/embed/9bZkp7q19f0?feature=oembed" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+<p>You can control the maximum size of the embedded content with the <code>max_height</code> and / or <code>max_width</code> parameters.  For example:</p>
+<pre><code>[!embed?max_width=300](http://www.youtube.com/watch?v=9bZkp7q19f0)
+[!embed?max_width=300&amp;max_height=200](http://www.youtube.com/watch?v=9bZkp7q19f0)
+</code></pre></div>
+      </div>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  </body>
+</html>
