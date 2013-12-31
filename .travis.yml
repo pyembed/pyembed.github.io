@@ -1,6 +1,9 @@
+env:
+  global:
+    secure: PBuds6kkJpIw7ICwVJ3nYzDtxVfTlBNCR4WQovYjn6aryoTuyv3+xtPoSxzdvJDj/G/gsNfUeGsXC3x9qDC/wfMsNpc6gFbksMNXbhc2O/ndjL0YI1rY4pIDdU76lVU+cstBQYF0kNqwU8fh4Yzp6VeAUTUxSluHVFJDol5VCA0=
 branches:
   only:
-    - source
+  - source
 language: python
 python:
   - 2.7
@@ -12,7 +15,6 @@ script:
   - pelican content -s publishconf.py
 after_success:
   - cd output
-  - chmod 600 .travis/deploy_key.pem
-  - ssh-add .travis/deploy_key.pem
-  - git remote add deploy git@github.com:rembed/rembed.github.io.git
-  - git push deploy
+  - git config credential.helper "store --file=.git/credentials"
+  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+  - git push origin master
