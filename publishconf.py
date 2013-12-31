@@ -14,5 +14,3 @@ SITEURL = 'http://rembed.github.io/'
 RELATIVE_URLS = False
 
 URL_ENDING = ''
-
-DELETE_OUTPUT_DIRECTORY = True
