@@ -4,7 +4,7 @@ save_as: markdown/examples/index.html
 
 [TOC]
 
-This page contains a number of examples of embeddings from various providers supported by REmbed.  It was generated using REmbed-Markdown, and you can view the source [here](https://github.com/rembed/rembed.github.io/blob/source/content/pages/markdown/examples.md).
+This page contains a number of examples of embeddings from various providers supported by REmbed.  It was generated using REmbed-Markdown, and you can view the source [here](https://raw.github.com/rembed/rembed.github.io/source/content/pages/markdown/examples.md).
 
 ## Flickr ##
 
