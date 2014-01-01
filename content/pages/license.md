@@ -2,7 +2,7 @@ Title: License
 URL: license/
 save_as: license/index.html
 
-REmbed is distributed under the MIT license.
+PyEmbed is distributed under the MIT license.
 
     Copyright (c) 2013 Matt Thomson
 

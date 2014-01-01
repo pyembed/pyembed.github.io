@@ -4,7 +4,7 @@ save_as: markdown/index.html
 
 [TOC]
 
-REmbed is available as an extension to [Python-Markdown](http://pythonhosted.org/Markdown/).  Embedding content is then a simple matter of using the special `[!embed]` link tag.  For example:
+PyEmbed is available as an extension to [Python-Markdown](http://pythonhosted.org/Markdown/).  Embedding content is then a simple matter of using the special `[!embed]` link tag.  For example:
 
     [!embed](http://www.youtube.com/watch?v=9bZkp7q19f0)
 
@@ -12,26 +12,26 @@ More examples can be seen on the [examples page](examples/).
 
 ## Installation ##
 
-REmbed-Markdown can be installed using [pip](http://www.pip-installer.org/).
+PyEmbed-Markdown can be installed using [pip](http://www.pip-installer.org/).
 
-    pip install rembed-markdown
+    pip install pyembed-markdown
 
 ## Usage ##
 
 ### Standalone ###
 
-REmbed-Markdown can be passed as a standard extension to Python-Markdown:
+PyEmbed-Markdown can be passed as a standard extension to Python-Markdown:
 
     >>> import markdown
-    >>> from rembed.markdown.extension import REmbedExtension
-    >>> html = markdown.markdown(text, extensions=[REmbedExtension()])
+    >>> from pyembed.markdown.extension import PyEmbedExtension
+    >>> html = markdown.markdown(text, extensions=[PyEmbedExtension()])
 
 ### Pelican ###
 
 If you're using [Pelican](http://docs.getpelican.com/), simply add these lines to your pelicanconf.py file:
 
-    from rembed.markdown.extension import REmbedExtension
-    MD_EXTENSIONS = [REmbedExtension()]
+    from pyembed.markdown.extension import PyEmbedExtension
+    MD_EXTENSIONS = [PyEmbedExtension()]
 
 ## Syntax ##
 

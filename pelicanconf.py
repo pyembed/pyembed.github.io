@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-from rembed.markdown.extension import REmbedExtension
+from pyembed.markdown.extension import PyEmbedExtension
 
 AUTHOR = u'Matt Thomson'
-SITENAME = u'REmbed'
+SITENAME = u'PyEmbed'
 SITEURL = ''
 
 TIMEZONE = 'Europe/London'
@@ -20,7 +20,7 @@ DEFAULT_PAGINATION = False
 
 THEME = 'theme'
 
-MD_EXTENSIONS = [REmbedExtension(), 'toc']
+MD_EXTENSIONS = [PyEmbedExtension(), 'toc']
 
 PLUGIN_PATH = 'plugins'
 PLUGINS = ['extract_toc']

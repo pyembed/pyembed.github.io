@@ -4,7 +4,7 @@ save_as: index.html
 
 [TOC]
 
-REmbed is a Python library that allows you to easily embed content on your website from a wide variety of sources (including [Flickr](http://flickr.com/), [Twitter](http://twitter.com/) and [YouTube](http://youtube.com/)).  It uses the [oEmbed](http://www.oembed.com/) standard to discover how to represent the resource on your website.
+PyEmbed is a Python library that allows you to easily embed content on your website from a wide variety of sources (including [Flickr](http://flickr.com/), [Twitter](http://twitter.com/) and [YouTube](http://youtube.com/)).  It uses the [oEmbed](http://www.oembed.com/) standard to discover how to represent the resource on your website.
 
 ## Key features ##
 
@@ -14,16 +14,16 @@ REmbed is a Python library that allows you to easily embed content on your websi
 
 ## Getting started ##
 
-If you want to use REmbed with Markdown, follow the links in the navigation bar at the top of the page.
+If you want to use PyEmbed with Markdown, follow the links in the navigation bar at the top of the page.
 
-If you're interested in using REmbed within your own project, then you can install the core library using [pip](http://www.pip-installer.org/).
+If you're interested in using PyEmbed within your own project, then you can install the core library using [pip](http://www.pip-installer.org/).
 
-    pip install rembed
+    pip install pyembed
 
 ## Compatibility ##
 
-REmbed has been tested with Python 2.7 and 3.3.
+PyEmbed has been tested with Python 2.7 and 3.3.
 
 ## Contributing ##
 
-To report an issue, request an enhancement, or contribute a patch, go to the [REmbed GitHub page](https://github.com/rembed/).
+To report an issue, request an enhancement, or contribute a patch, go to the [PyEmbed GitHub page](https://github.com/pyembed/).

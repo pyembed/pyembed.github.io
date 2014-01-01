@@ -1,6 +1,6 @@
 env:
   global:
-    secure: PBuds6kkJpIw7ICwVJ3nYzDtxVfTlBNCR4WQovYjn6aryoTuyv3+xtPoSxzdvJDj/G/gsNfUeGsXC3x9qDC/wfMsNpc6gFbksMNXbhc2O/ndjL0YI1rY4pIDdU76lVU+cstBQYF0kNqwU8fh4Yzp6VeAUTUxSluHVFJDol5VCA0=
+    secure: IfyAsjOthEuS5QbbYslKWA1CldZD8WWMfS+iBc7m7gf8/kyBBg0PWsFVJ8phFzweBY/1oRz6FwTu46U48HYcEqtWhcR3zZ3DYmiaJJESvXOL++Bc00pq5fkILMEy53t1Vvnlpof/ZAADkyrvWA9gBpzBflsdAdnc5Fxs5BqYrgc=
 branches:
   only:
     - source
@@ -8,9 +8,9 @@ language: python
 python:
   - 2.7
 install:
-  - pip install pelican rembed-markdown
+  - pip install pelican pyembed-markdown
 before_script:
-  - git clone https://github.com/rembed/rembed.github.io.git output
+  - git clone https://github.com/pyembed/pyembed.github.io.git output
 script:
   - pelican content -s publishconf.py
 after_success:

@@ -1,4 +1,4 @@
-rembed.github.io
+pyembed.github.io
 ================
 
-REmbed documentation
+PyEmbed documentation
