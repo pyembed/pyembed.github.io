@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>    REmbed - Markdown
+    <title>    PyEmbed - Markdown
 </title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="http://rembed.github.io/theme/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://rembed.github.io/theme/css/main.css">
+    <link rel="stylesheet" href="http://pyembed.github.io/theme/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://pyembed.github.io/theme/css/main.css">
   </head>
 
   <body>
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a href="http://rembed.github.io/" class="navbar-brand">REmbed</a>
+          <a href="http://pyembed.github.io/" class="navbar-brand">PyEmbed</a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -27,14 +27,14 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Markdown<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="http://rembed.github.io/markdown/">Introduction</a></li>
-                <li><a href="http://rembed.github.io/markdown/examples/">Examples</a></li>
+                <li><a href="http://pyembed.github.io/markdown/">Introduction</a></li>
+                <li><a href="http://pyembed.github.io/markdown/examples/">Examples</a></li>
               </ul>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://rembed.github.io/license/">License</a></li>
-            <li><a href="https://github.com/rembed/">GitHub</a></li>
+            <li><a href="http://pyembed.github.io/license/">License</a></li>
+            <li><a href="https://github.com/pyembed/">GitHub</a></li>
           </ul>
         </div>
       </div>
@@ -67,25 +67,25 @@
           </div>
         </div>
         <div class="col-md-9">
-<p>REmbed is available as an extension to <a href="http://pythonhosted.org/Markdown/">Python-Markdown</a>.  Embedding content is then a simple matter of using the special <code>[!embed]</code> link tag.  For example:</p>
+<p>PyEmbed is available as an extension to <a href="http://pythonhosted.org/Markdown/">Python-Markdown</a>.  Embedding content is then a simple matter of using the special <code>[!embed]</code> link tag.  For example:</p>
 <pre><code>[!embed](http://www.youtube.com/watch?v=9bZkp7q19f0)
 </code></pre>
 <p>More examples can be seen on the <a href="examples/">examples page</a>.</p>
 <h2 id="installation">Installation</h2>
-<p>REmbed-Markdown can be installed using <a href="http://www.pip-installer.org/">pip</a>.</p>
-<pre><code>pip install rembed-markdown
+<p>PyEmbed-Markdown can be installed using <a href="http://www.pip-installer.org/">pip</a>.</p>
+<pre><code>pip install pyembed-markdown
 </code></pre>
 <h2 id="usage">Usage</h2>
 <h3 id="standalone">Standalone</h3>
-<p>REmbed-Markdown can be passed as a standard extension to Python-Markdown:</p>
+<p>PyEmbed-Markdown can be passed as a standard extension to Python-Markdown:</p>
 <pre><code>&gt;&gt;&gt; import markdown
-&gt;&gt;&gt; from rembed.markdown.extension import REmbedExtension
-&gt;&gt;&gt; html = markdown.markdown(text, extensions=[REmbedExtension()])
+&gt;&gt;&gt; from pyembed.markdown.extension import PyEmbedExtension
+&gt;&gt;&gt; html = markdown.markdown(text, extensions=[PyEmbedExtension()])
 </code></pre>
 <h3 id="pelican">Pelican</h3>
 <p>If you're using <a href="http://docs.getpelican.com/">Pelican</a>, simply add these lines to your pelicanconf.py file:</p>
-<pre><code>from rembed.markdown.extension import REmbedExtension
-MD_EXTENSIONS = [REmbedExtension()]
+<pre><code>from pyembed.markdown.extension import PyEmbedExtension
+MD_EXTENSIONS = [PyEmbedExtension()]
 </code></pre>
 <h2 id="syntax">Syntax</h2>
 <h3 id="basics">Basics</h3>
