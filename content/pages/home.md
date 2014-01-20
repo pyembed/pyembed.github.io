@@ -20,6 +20,11 @@ If you're interested in using PyEmbed within your own project, then you can inst
 
     pip install pyembed
 
+Embedding is then as easy as this:
+
+    >>> from pyembed.core import PyEmbed
+    >>> html = PyEmbed().embed('http://www.youtube.com/watch?v=9bZkp7q19f0')
+
 ## Compatibility ##
 
 PyEmbed has been tested with Python 2.7 and 3.3.
