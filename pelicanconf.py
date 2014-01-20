@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-from pyembed.markdown.extension import PyEmbedExtension
+from pyembed.markdown import PyEmbedMarkdown
 
 AUTHOR = u'Matt Thomson'
 SITENAME = u'PyEmbed'
@@ -20,7 +20,7 @@ DEFAULT_PAGINATION = False
 
 THEME = 'theme'
 
-MD_EXTENSIONS = [PyEmbedExtension(), 'toc']
+MD_EXTENSIONS = [PyEmbedMarkdown(), 'toc']
 
 PLUGIN_PATH = 'plugins'
 PLUGINS = ['extract_toc']

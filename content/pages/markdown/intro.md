@@ -23,8 +23,8 @@ PyEmbed-Markdown can be installed using [pip](http://www.pip-installer.org/).
 PyEmbed-Markdown can be passed as a standard extension to Python-Markdown:
 
     >>> import markdown
-    >>> from pyembed.markdown.extension import PyEmbedExtension
-    >>> html = markdown.markdown(text, extensions=[PyEmbedExtension()])
+    >>> from pyembed.markdown import PyEmbedMarkdown
+    >>> html = markdown.markdown(text, extensions=[PyEmbedMarkdown()])
 
 ### Pelican ###
 
