@@ -8,7 +8,7 @@ PyEmbed allows you to control exactly how content is renderer by supplying a cus
 
 ## Using a renderer ##
 
-### Direct usage ###
+### Standalone ###
 
 If you're using PyEmbed directly, you can specify a custom renderer as follows:
 
@@ -16,7 +16,7 @@ If you're using PyEmbed directly, you can specify a custom renderer as follows:
 
 ### Markdown ###
 
-You can pass a custom renderer directly to the [Markdown extension](../markdown):
+You can pass a custom renderer directly to the [Markdown extension](/usage/markdown/):
 
     >>> html = markdown.markdown(text, extensions=[PyEmbedExtension(renderer)])
 

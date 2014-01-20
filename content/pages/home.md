@@ -16,16 +16,7 @@ PyEmbed is a Python library that allows you to easily embed content on your webs
 
 ## Getting started ##
 
-If you want to use PyEmbed with Markdown, follow the links in the navigation bar at the top of the page.
-
-If you're interested in using PyEmbed within your own project, then you can install the core library using [pip](http://www.pip-installer.org/).
-
-    pip install pyembed
-
-Embedding is then as easy as this:
-
-    >>> from pyembed.core import PyEmbed
-    >>> html = PyEmbed().embed('http://www.youtube.com/watch?v=9bZkp7q19f0')
+PyEmbed comes with out-of-the-box support for Markdown, or you can embed it in your own applications.  See the Usage section on the navigation bar for more information.
 
 ## Compatibility ##
 

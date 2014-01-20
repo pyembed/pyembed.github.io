@@ -1,6 +1,6 @@
-Title: Markdown
-URL: markdown/
-save_as: markdown/index.html
+Title: Usage with Markdown
+URL: usage/markdown/
+save_as: usage/markdown/index.html
 
 [TOC]
 
@@ -8,7 +8,7 @@ PyEmbed is available as an extension to [Python-Markdown](http://pythonhosted.or
 
     [!embed](http://www.youtube.com/watch?v=9bZkp7q19f0)
 
-More examples can be seen on the [examples page](examples/).
+More examples can be seen on the [examples page](/examples/markdown/).
 
 ## Installation ##
 

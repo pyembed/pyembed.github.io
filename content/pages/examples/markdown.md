@@ -1,10 +1,10 @@
 Title: Markdown Examples
-URL: markdown/examples/
-save_as: markdown/examples/index.html
+URL: examples/markdown/
+save_as: examples/markdown/index.html
 
 [TOC]
 
-This page contains a number of examples of embeddings from various providers supported by PyEmbed.  It was generated using PyEmbed-Markdown, and you can view the source [here](https://raw.github.com/pyembed/pyembed.github.io/source/content/pages/markdown/examples.md).
+This page contains a number of examples of embeddings from various providers supported by PyEmbed.  It was generated using PyEmbed-Markdown, and you can view the source [here](https://raw.github.com/pyembed/pyembed.github.io/source/content/pages/examples/markdown.md).
 
 ## Flickr ##
 
