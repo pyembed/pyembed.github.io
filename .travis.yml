@@ -1,9 +1,8 @@
 env:
-  global:
-    secure: IfyAsjOthEuS5QbbYslKWA1CldZD8WWMfS+iBc7m7gf8/kyBBg0PWsFVJ8phFzweBY/1oRz6FwTu46U48HYcEqtWhcR3zZ3DYmiaJJESvXOL++Bc00pq5fkILMEy53t1Vvnlpof/ZAADkyrvWA9gBpzBflsdAdnc5Fxs5BqYrgc=
+  secure: HyuPY4bB7ytlqYbCrNpUStEjLs16jR619PQCn1mjwA+T0RkaDYVYHeGm6HMy6mfRYc/CX9o6fz1bDp1UIdzuLx/NhUnB7t5ykNqWBX7+QOrpLyEJQXIDyn9xI6BGkXrRfzCImqiH02jOr+vWT8WRXyHcuT45EwMDuXtr4a3sgYo=
 branches:
   only:
-    - source
+  - source
 language: python
 python:
   - 2.7
