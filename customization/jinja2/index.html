@@ -68,6 +68,7 @@
             <div class="toc">
 <ul>
 <li><a href="#usage">Usage</a></li>
+<li><a href="#available-parameters">Available parameters</a></li>
 </ul>
 </div>
           </div>
@@ -88,7 +89,137 @@
 <pre><code>&gt;&gt;&gt; from pyembed.jinja2 import Jinja2Renderer
 &gt;&gt;&gt; renderer = Jinja2Renderer(path_to_template_dir)
 </code></pre>
-<p>For more information on how to use the renderer, see the <a href="../">introduction to customization</a>.</p></div>
+<p>For more information on how to use the renderer, see the <a href="../">introduction to customization</a>.</p>
+<h2 id="available-parameters">Available parameters</h2>
+<p>The table below shows which parameters are available for each response type.  For more information, see section 2.3.4 of the <a href="http://oembed.com">OEmbed spec</a>.</p>
+<p>The exception is the first parameter, <code>content_url</code>, which contains the URL that was requested to be embedded.</p>
+<div class="table-responsive">
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Link</th>
+<th>Photo</th>
+<th>Rich</th>
+<th>Video</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>content_url</td>
+<td class="success">Required</td>
+<td class="success">Required</td>
+<td class="success">Required</td>
+<td class="success">Required</td>
+</tr>
+<tr>
+<td>type</td>
+<td class="success">Required</td>
+<td class="success">Required</td>
+<td class="success">Required</td>
+<td class="success">Required</td>
+</tr>
+<tr>
+<td>version</td>
+<td class="success">Required</td>
+<td class="success">Required</td>
+<td class="success">Required</td>
+<td class="success">Required</td>
+</tr>
+<tr>
+<td>title</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+</tr>
+<tr>
+<td>author_name</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+</tr>
+<tr>
+<td>author_url</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+</tr>
+<tr>
+<td>provider_name</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+</tr>
+<tr>
+<td>provider_url</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+</tr>
+<tr>
+<td>cache_age</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+</tr>
+<tr>
+<td>thumbnail_url</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+</tr>
+<tr>
+<td>thumbnail_width</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+</tr>
+<tr>
+<td>thumbnail_height</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+<td class="warning">Optional</td>
+</tr>
+<tr>
+<td>url</td>
+<td class="danger">Not present</td>
+<td class="success">Required</td>
+<td class="danger">Not present</td>
+<td class="danger">Not present</td>
+</tr>
+<tr>
+<td>width</td>
+<td class="danger">Not present</td>
+<td class="success">Required</td>
+<td class="success">Required</td>
+<td class="success">Required</td>
+</tr>
+<tr>
+<td>height</td>
+<td class="danger">Not present</td>
+<td class="success">Required</td>
+<td class="success">Required</td>
+<td class="success">Required</td>
+</tr>
+<tr>
+<td>html</td>
+<td class="danger">Not present</td>
+<td class="danger">Not present</td>
+<td class="success">Required</td>
+<td class="success">Required</td>
+</tr>
+</tbody>
+</table>
+</div></div>
       </div>
     </div>
     </div>
