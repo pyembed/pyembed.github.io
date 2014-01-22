@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PyEmbed</title>
+    <title>    PyEmbed - Customization with Jinja2
+</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,8 +57,40 @@
     </div>
 
     <div class="container">
+  <div class="page-header">
+    <h1>Customization with Jinja2</h1>
+  </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="hidden-print" role="complementary">
+            <div class="toc">
 <ul>
+<li><a href="#usage">Usage</a></li>
 </ul>
+</div>
+          </div>
+        </div>
+        <div class="col-md-9">
+<p>PyEmbed allows you to control how embeddings are rendered using Jinja2 templates.  For example, if you want to include the thumbnail image when embedding a link, you could use a template like this:</p>
+<pre><code>&lt;a href="{{content_url}}"&gt;&lt;img src="{{thumbnail_url}}" /&gt;&lt;/a&gt;
+</code></pre>
+<h2 id="usage">Usage</h2>
+<p>In order to use the Jinja2 renderer, you must create a directory containing template files for each type of OEmbed resource.  These files must be named:</p>
+<ul>
+<li>link.html</li>
+<li>photo.html</li>
+<li>rich.html</li>
+<li>video.html</li>
+</ul>
+<p>You can then create the renderer as follows:</p>
+<pre><code>&gt;&gt;&gt; from pyembed.jinja2 import Jinja2Renderer
+&gt;&gt;&gt; renderer = Jinja2Renderer(path_to_template_dir)
+</code></pre>
+<p>For more information on how to use the renderer, see the <a href="../">introduction to customization</a>.</p></div>
+      </div>
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery.js"></script>

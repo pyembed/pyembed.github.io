@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>    PyEmbed - License
+    <title>    PyEmbed - Usage with Markdown
 </title>
 
     <meta charset="utf-8" />
@@ -58,29 +58,67 @@
 
     <div class="container">
   <div class="page-header">
-    <h1>License</h1>
+    <h1>Usage with Markdown</h1>
   </div>
 
-    <p>PyEmbed is distributed under the MIT license.</p>
-<blockquote>
-<p>Copyright (c) 2013 Matt Thomson</p>
-<p>Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:</p>
-<p>The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.</p>
-<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
-</blockquote>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="hidden-print" role="complementary">
+            <div class="toc">
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a><ul>
+<li><a href="#standalone">Standalone</a></li>
+<li><a href="#pelican">Pelican</a></li>
+</ul>
+</li>
+<li><a href="#syntax">Syntax</a><ul>
+<li><a href="#basics">Basics</a></li>
+<li><a href="#parameters">Parameters</a></li>
+</ul>
+</li>
+</ul>
+</div>
+          </div>
+        </div>
+        <div class="col-md-9">
+<p>PyEmbed is available as an extension to <a href="http://pythonhosted.org/Markdown/">Python-Markdown</a>.  Embedding content is then a simple matter of using the special <code>[!embed]</code> link tag.  For example:</p>
+<pre><code>[!embed](http://www.youtube.com/watch?v=9bZkp7q19f0)
+</code></pre>
+<p>More examples can be seen on the <a href="/examples/markdown/">examples page</a>.</p>
+<h2 id="installation">Installation</h2>
+<p>PyEmbed-Markdown can be installed using <a href="http://www.pip-installer.org/">pip</a>.</p>
+<pre><code>pip install pyembed-markdown
+</code></pre>
+<h2 id="usage">Usage</h2>
+<h3 id="standalone">Standalone</h3>
+<p>PyEmbed-Markdown can be passed as a standard extension to Python-Markdown:</p>
+<pre><code>&gt;&gt;&gt; import markdown
+&gt;&gt;&gt; from pyembed.markdown import PyEmbedMarkdown
+&gt;&gt;&gt; html = markdown.markdown(text, extensions=[PyEmbedMarkdown()])
+</code></pre>
+<h3 id="pelican">Pelican</h3>
+<p>If you're using <a href="http://docs.getpelican.com/">Pelican</a>, simply add these lines to your pelicanconf.py file:</p>
+<pre><code>from pyembed.markdown.extension import PyEmbedExtension
+MD_EXTENSIONS = [PyEmbedExtension()]
+</code></pre>
+<h2 id="syntax">Syntax</h2>
+<h3 id="basics">Basics</h3>
+<p>The default syntax for embedding is to create a link with text <code>!embed</code>, and the URL of the content to embed.</p>
+<p>For example, this source:</p>
+<pre><code>[!embed](http://www.youtube.com/watch?v=9bZkp7q19f0)
+</code></pre>
+<p>will result in the following HTML output:</p>
+<pre><code>&lt;iframe width="480" height="270" src="http://www.youtube.com/embed/9bZkp7q19f0?feature=oembed" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+<p>You can control the maximum size of the embedded content with the <code>max_height</code> and / or <code>max_width</code> parameters.  For example:</p>
+<pre><code>[!embed?max_width=300](http://www.youtube.com/watch?v=9bZkp7q19f0)
+[!embed?max_width=300&amp;max_height=200](http://www.youtube.com/watch?v=9bZkp7q19f0)
+</code></pre></div>
+      </div>
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery.js"></script>

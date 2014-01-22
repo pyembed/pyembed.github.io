@@ -25,10 +25,26 @@
         <div class="collapse navbar-collapse" id="navbar-main">
           <ul class="nav navbar-nav">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Markdown<b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usage<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="http://pyembed.github.io/markdown/">Introduction</a></li>
-                <li><a href="http://pyembed.github.io/markdown/examples/">Examples</a></li>
+                <li><a href="http://pyembed.github.io/usage/standalone/">Standalone</a></li>
+                <li class="divider"></li>
+                <li><a href="http://pyembed.github.io/usage/markdown/">Markdown</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://pyembed.github.io/examples/markdown/">Markdown</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Customization<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://pyembed.github.io/customization/">Introduction</a></li>
+                <li class="divider"></li>
+                <li><a href="http://pyembed.github.io/customization/jinja2/">Jinja2</a></li>
+                <li><a href="http://pyembed.github.io/customization/mustache/">Mustache</a></li>
               </ul>
             </li>
           </ul>
@@ -66,12 +82,11 @@
 <li>Zero configuration - just supply the URL that you want to embed content from.</li>
 <li>Support for <a href="http://daringfireball.net/projects/markdown/">Markdown</a>.</li>
 <li>Works with static site generators, including <a href="http://docs.getpelican.com">Pelican</a>.</li>
+<li>Fully customizable embeddings, with support for <a href="http://jinja.pocoo.org/">Jinja2</a>
+ and <a href="http://mustache.github.io/">Mustache</a>.</li>
 </ul>
 <h2 id="getting-started">Getting started</h2>
-<p>If you want to use PyEmbed with Markdown, follow the links in the navigation bar at the top of the page.</p>
-<p>If you're interested in using PyEmbed within your own project, then you can install the core library using <a href="http://www.pip-installer.org/">pip</a>.</p>
-<pre><code>pip install pyembed
-</code></pre>
+<p>PyEmbed comes with out-of-the-box support for Markdown, or you can embed it in your own applications.  See the Usage section on the navigation bar for more information.</p>
 <h2 id="compatibility">Compatibility</h2>
 <p>PyEmbed has been tested with Python 2.7 and 3.3.</p>
 <h2 id="contributing">Contributing</h2>
