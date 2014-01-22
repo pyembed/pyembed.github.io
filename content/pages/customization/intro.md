@@ -18,7 +18,7 @@ If you're using PyEmbed directly, you can specify a custom renderer as follows:
 
 You can pass a custom renderer directly to the [Markdown extension](/usage/markdown/):
 
-    >>> html = markdown.markdown(text, extensions=[PyEmbedExtension(renderer)])
+    >>> html = markdown.markdown(text, extensions=[PyEmbedMarkdown(renderer)])
 
 ## Creating a custom renderer ##
 
