@@ -19,4 +19,4 @@ after_success:
   - git config user.email "travis@travis-ci.org"
   - git add .
   - git commit -m "Updating site"
-  - git push "https://${GH_TOKEN}@github.com/pyembed/pyembed.github.io" master > /dev/null 2>&1
+  - git push "https://${GH_TOKEN}@github.com/pyembed/pyembed.github.io.git" master > /dev/null 2>&1
