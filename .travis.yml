@@ -1,8 +1,9 @@
 env:
-  secure: HyuPY4bB7ytlqYbCrNpUStEjLs16jR619PQCn1mjwA+T0RkaDYVYHeGm6HMy6mfRYc/CX9o6fz1bDp1UIdzuLx/NhUnB7t5ykNqWBX7+QOrpLyEJQXIDyn9xI6BGkXrRfzCImqiH02jOr+vWT8WRXyHcuT45EwMDuXtr4a3sgYo=
+  global:
+    secure: TJg9T8wFNSfxk19Bciv7UDpXZyuZA4uiebwwegQSxuM0Z74PE0L3Ko/AXhnCOyBpth4rONI4yYWSl/e/c9OPlAEG4z+PXW+nz7CYv1dUdb/pqGvU6nsUPgE+oHaDdsUIyUyM+FLDdd7GDf3fDz3jLS2E9M2EWjq59BGXTibUCdw=
 branches:
   only:
-  - source
+    - source
 language: python
 python:
   - 2.7
@@ -18,4 +19,4 @@ after_success:
   - git config user.email "travis@travis-ci.org"
   - git add .
   - git commit -m "Updating site"
-  - git push "https://${GH_TOKEN}@github.com" master
+  - git push "https://${GH_TOKEN}@github.com/pyembed/pyembed.github.io" master > /dev/null 2>&1
