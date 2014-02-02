@@ -20,6 +20,13 @@ You can pass a custom renderer directly to the [Markdown extension](/usage/markd
 
     >>> html = markdown.markdown(text, extensions=[PyEmbedMarkdown(renderer)])
 
+### reStructuredText ###
+
+You can pass a custom renderer directly to the [reStructuredText extension](/usage/rst/):
+
+    >>> PyEmbedRst(renderer).register()
+    >>> html = publish_string(text)
+
 ## Creating a custom renderer ##
 
 If you want to create your own renderer, you should extend the [PyEmbedRenderer](https://github.com/pyembed/pyembed/blob/master/pyembed/core/render.py) class, overriding the `render` method.

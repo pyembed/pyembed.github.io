@@ -9,14 +9,14 @@ PyEmbed is a Python library that allows you to easily embed content on your webs
 ## Key features ##
 
 - Zero configuration - just supply the URL that you want to embed content from.
-- Support for [Markdown](http://daringfireball.net/projects/markdown/).
+- Support for [Markdown](http://daringfireball.net/projects/markdown/) and [reStructuredText](http://docutils.sourceforge.net/rst.html).
 - Works with static site generators, including [Pelican](http://docs.getpelican.com).
 - Fully customizable embeddings, with support for [Jinja2](http://jinja.pocoo.org/)
  and [Mustache](http://mustache.github.io/).
 
 ## Getting started ##
 
-PyEmbed comes with out-of-the-box support for Markdown, or you can embed it in your own applications.  See the Usage section on the navigation bar for more information.
+PyEmbed comes with out-of-the-box support for Markdown and reStructuredText, or you can embed it in your own applications.  See the Usage section on the navigation bar for more information.
 
 ## Compatibility ##
 

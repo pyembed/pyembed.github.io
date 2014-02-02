@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 from pyembed.markdown import PyEmbedMarkdown
+from pyembed.rst import PyEmbedRst
 
 AUTHOR = u'Matt Thomson'
 SITENAME = u'PyEmbed'
@@ -21,6 +22,7 @@ DEFAULT_PAGINATION = False
 THEME = 'theme'
 
 MD_EXTENSIONS = [PyEmbedMarkdown(), 'toc']
+PyEmbedRst().register()
 
 PLUGIN_PATH = 'plugins'
 PLUGINS = ['extract_toc']
