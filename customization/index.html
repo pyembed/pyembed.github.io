@@ -30,12 +30,14 @@
                 <li><a href="http://pyembed.github.io/usage/standalone/">Standalone</a></li>
                 <li class="divider"></li>
                 <li><a href="http://pyembed.github.io/usage/markdown/">Markdown</a></li>
+                <li><a href="http://pyembed.github.io/usage/rst/">reStructuredText</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="http://pyembed.github.io/examples/markdown/">Markdown</a></li>
+                <li><a href="http://pyembed.github.io/examples/rst/">reStructuredText</a></li>
               </ul>
             </li>
             <li class="dropdown">
@@ -70,6 +72,7 @@
 <li><a href="#using-a-renderer">Using a renderer</a><ul>
 <li><a href="#standalone">Standalone</a></li>
 <li><a href="#markdown">Markdown</a></li>
+<li><a href="#restructuredtext">reStructuredText</a></li>
 </ul>
 </li>
 <li><a href="#creating-a-custom-renderer">Creating a custom renderer</a></li>
@@ -87,6 +90,11 @@
 <h3 id="markdown">Markdown</h3>
 <p>You can pass a custom renderer directly to the <a href="/usage/markdown/">Markdown extension</a>:</p>
 <pre><code>&gt;&gt;&gt; html = markdown.markdown(text, extensions=[PyEmbedMarkdown(renderer)])
+</code></pre>
+<h3 id="restructuredtext">reStructuredText</h3>
+<p>You can pass a custom renderer directly to the <a href="/usage/rst/">reStructuredText extension</a>:</p>
+<pre><code>&gt;&gt;&gt; PyEmbedRst(renderer).register()
+&gt;&gt;&gt; html = publish_string(text)
 </code></pre>
 <h2 id="creating-a-custom-renderer">Creating a custom renderer</h2>
 <p>If you want to create your own renderer, you should extend the <a href="https://github.com/pyembed/pyembed/blob/master/pyembed/core/render.py">PyEmbedRenderer</a> class, overriding the <code>render</code> method.</p></div>

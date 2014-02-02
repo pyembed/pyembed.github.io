@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PyEmbed</title>
+    <title>    PyEmbed - Usage with reStructuredText
+</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,10 +59,73 @@
     </div>
 
     <div class="container">
-<h1>Archives for PyEmbed</h1>
+  <div class="page-header">
+    <h1>Usage with reStructuredText</h1>
+  </div>
 
-<dl>
-</dl>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="hidden-print" role="complementary">
+            <div class="toc">
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a><ul>
+<li><a href="#standalone">Standalone</a></li>
+<li><a href="#pelican">Pelican</a></li>
+</ul>
+</li>
+<li><a href="#syntax">Syntax</a><ul>
+<li><a href="#basics">Basics</a></li>
+<li><a href="#parameters">Parameters</a></li>
+</ul>
+</li>
+</ul>
+</div>
+          </div>
+        </div>
+        <div class="col-md-9">
+<p>PyEmbed is available as a <a href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> directive, for use with <a href="http://docutils.sourceforge.net/">Docutils</a> Embedding content is then a simple matter of using the special <code>.. embed::</code> tag.  For example:</p>
+<pre><code>.. embed:: http://www.youtube.com/watch?v=9bZkp7q19f0
+</code></pre>
+<p>More examples can be seen on the <a href="/examples/rst/">examples page</a>.</p>
+<h2 id="installation">Installation</h2>
+<p>PyEmbed-Rst can be installed using <a href="http://www.pip-installer.org/">pip</a>.</p>
+<pre><code>pip install pyembed-rst
+</code></pre>
+<h2 id="usage">Usage</h2>
+<h3 id="standalone">Standalone</h3>
+<p>PyEmbed-Rst can be registered as a standard reStructuredText directive:</p>
+<pre><code>&gt;&gt;&gt; from pyembed.rst import PyEmbedRst
+&gt;&gt;&gt; PyEmbedRst().register()
+&gt;&gt;&gt; html = publish_string(text)
+</code></pre>
+<h3 id="pelican">Pelican</h3>
+<p>If you're using <a href="http://docs.getpelican.com/">Pelican</a>, simply add these lines to your pelicanconf.py file:</p>
+<pre><code>from pyembed.rst import PyEmbedRst
+PyEmbedRst().register()
+</code></pre>
+<h2 id="syntax">Syntax</h2>
+<h3 id="basics">Basics</h3>
+<p>The default syntax for embedding is to use the <code>embed</code> directive, including the URL of the content to embed.</p>
+<p>For example, this source:</p>
+<pre><code>.. embed:: http://www.youtube.com/watch?v=9bZkp7q19f0
+</code></pre>
+<p>will result in the following HTML output:</p>
+<pre><code>&lt;iframe width="480" height="270" src="http://www.youtube.com/embed/9bZkp7q19f0?feature=oembed" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+<p>You can control the maximum size of the embedded content with the <code>max_height</code> and / or <code>max_width</code> parameters.  For example:</p>
+<pre><code>.. embed:: http://www.youtube.com/watch?v=9bZkp7q19f0
+   :max_width: 300
+</code></pre>
+<!-- break -->
+<pre><code>.. embed:: http://www.youtube.com/watch?v=9bZkp7q19f0
+   :max_width: 300
+   :max_height: 200
+</code></pre></div>
+      </div>
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery.js"></script>
