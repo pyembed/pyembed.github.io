@@ -20,8 +20,19 @@ PyEmbed comes with out-of-the-box support for Markdown and reStructuredText, or 
 
 ## Compatibility ##
 
-PyEmbed has been tested with Python 2.7 and 3.3.
+PyEmbed has been tested with Python 2.7, 3.3 and 3.4.
 
 ## Contributing ##
 
 To report an issue, request an enhancement, or contribute a patch, go to the [PyEmbed GitHub page](https://github.com/pyembed/).
+
+## Release history ##
+
+### v1.1.0, 2014-08-02 ###
+
+This release adds support for more providers.  These are statically configured based on the list in the [oEmbed spec](http://oembed.com).
+
+### v1.0.0, 2014-02-05 ###
+
+Initial stable release.
+

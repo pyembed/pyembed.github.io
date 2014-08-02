@@ -18,6 +18,10 @@ This page contains a number of examples of embeddings from various providers sup
 
 [!embed](http://www.kickstarter.com/projects/597507018/pebble-e-paper-watch-for-iphone-and-android)
 
+## Rdio ##
+
+[!embed](http://www.rdio.com/artist/Mike_Oldfield/album/Amarok/)
+
 ## SlideShare ##
 
 [!embed](http://www.slideshare.net/haraldf/business-quotes-for-2011)
