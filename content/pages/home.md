@@ -28,11 +28,15 @@ To report an issue, request an enhancement, or contribute a patch, go to the [Py
 
 ## Release history ##
 
-### v1.1.0, 2014-08-02 ###
+### v1.1.0 ###
+
+* Released 2014-08-02 *
 
 This release adds support for more providers.  These are statically configured based on the list in the [oEmbed spec](http://oembed.com).
 
-### v1.0.0, 2014-02-05 ###
+### v1.0.0 ###
 
+
+* Released 2014-02-05 *
 Initial stable release.
 
