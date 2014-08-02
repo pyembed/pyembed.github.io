@@ -24,7 +24,7 @@ THEME = 'theme'
 MD_EXTENSIONS = [PyEmbedMarkdown(), 'toc']
 PyEmbedRst().register()
 
-PLUGIN_PATH = 'plugins'
+PLUGIN_PATHS = ['plugins']
 PLUGINS = ['extract_toc']
 
 URL_ENDING = 'index.html'
