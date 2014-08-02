@@ -12,19 +12,19 @@ PyEmbed allows you to control exactly how content is renderer by supplying a cus
 
 If you're using PyEmbed directly, you can specify a custom renderer as follows:
 
-    >>> html = PyEmbed(renderer).embed(url)
+    >>> html = PyEmbed(renderer=renderer).embed(url)
 
 ### Markdown ###
 
 You can pass a custom renderer directly to the [Markdown extension](/usage/markdown/):
 
-    >>> html = markdown.markdown(text, extensions=[PyEmbedMarkdown(renderer)])
+    >>> html = markdown.markdown(text, extensions=[PyEmbedMarkdown(renderer=renderer)])
 
 ### reStructuredText ###
 
 You can pass a custom renderer directly to the [reStructuredText extension](/usage/rst/):
 
-    >>> PyEmbedRst(renderer).register()
+    >>> PyEmbedRst(renderer=renderer).register()
     >>> html = publish_string(text)
 
 ## Creating a custom renderer ##
