@@ -85,15 +85,15 @@
 <h2 id="using-a-renderer">Using a renderer</h2>
 <h3 id="standalone">Standalone</h3>
 <p>If you're using PyEmbed directly, you can specify a custom renderer as follows:</p>
-<pre><code>&gt;&gt;&gt; html = PyEmbed(renderer).embed(url)
+<pre><code>&gt;&gt;&gt; html = PyEmbed(renderer=renderer).embed(url)
 </code></pre>
 <h3 id="markdown">Markdown</h3>
 <p>You can pass a custom renderer directly to the <a href="/usage/markdown/">Markdown extension</a>:</p>
-<pre><code>&gt;&gt;&gt; html = markdown.markdown(text, extensions=[PyEmbedMarkdown(renderer)])
+<pre><code>&gt;&gt;&gt; html = markdown.markdown(text, extensions=[PyEmbedMarkdown(renderer=renderer)])
 </code></pre>
 <h3 id="restructuredtext">reStructuredText</h3>
 <p>You can pass a custom renderer directly to the <a href="/usage/rst/">reStructuredText extension</a>:</p>
-<pre><code>&gt;&gt;&gt; PyEmbedRst(renderer).register()
+<pre><code>&gt;&gt;&gt; PyEmbedRst(renderer=renderer).register()
 &gt;&gt;&gt; html = publish_string(text)
 </code></pre>
 <h2 id="creating-a-custom-renderer">Creating a custom renderer</h2>
