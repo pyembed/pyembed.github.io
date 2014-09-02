@@ -28,6 +28,12 @@ To report an issue, request an enhancement, or contribute a patch, go to the [Py
 
 ## Release history ##
 
+### v1.1.1 ###
+
+*Released 2014-09-02*
+
+Fixed bug with embedding from SoundCloud.
+
 ### v1.1.0 ###
 
 *Released 2014-08-02*
