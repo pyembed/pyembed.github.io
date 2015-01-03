@@ -28,6 +28,12 @@ To report an issue, request an enhancement, or contribute a patch, go to the [Py
 
 ## Release history ##
 
+### v1.1.2 ###
+
+*Released 2015-01-03*
+
+Allow overriding the templates in the default renderer.
+
 ### v1.1.1 ###
 
 *Released 2014-09-02*
