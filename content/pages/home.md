@@ -28,6 +28,12 @@ To report an issue, request an enhancement, or contribute a patch, go to the [Py
 
 ## Release history ##
 
+### v1.2.0 ###
+
+*Released 2015-08-12*
+
+Use [official list of providers](http://oembed.com/providers.json).
+
 ### v1.1.2 ###
 
 *Released 2015-01-03*
