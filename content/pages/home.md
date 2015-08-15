@@ -28,6 +28,12 @@ To report an issue, request an enhancement, or contribute a patch, go to the [Py
 
 ## Release history ##
 
+### v1.2.1 ###
+
+*Released 2015-08-15*
+
+Fix Beautiful Soup warning.
+
 ### v1.2.0 ###
 
 *Released 2015-08-12*
