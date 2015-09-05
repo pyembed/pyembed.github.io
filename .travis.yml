@@ -1,3 +1,4 @@
+sudo: false
 env:
   global:
     secure: TJg9T8wFNSfxk19Bciv7UDpXZyuZA4uiebwwegQSxuM0Z74PE0L3Ko/AXhnCOyBpth4rONI4yYWSl/e/c9OPlAEG4z+PXW+nz7CYv1dUdb/pqGvU6nsUPgE+oHaDdsUIyUyM+FLDdd7GDf3fDz3jLS2E9M2EWjq59BGXTibUCdw=
