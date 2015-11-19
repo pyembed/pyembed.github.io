@@ -28,6 +28,12 @@ To report an issue, request an enhancement, or contribute a patch, go to the [Py
 
 ## Release history ##
 
+### v1.3.1 ###
+
+*Released 2015-11-19*
+
+Handle downtime of provider list.
+
 ### v1.3.0 ###
 
 *Released 2015-09-05*
