@@ -26,11 +26,6 @@ Kickstarter
 
 .. embed:: http://www.kickstarter.com/projects/597507018/pebble-e-paper-watch-for-iphone-and-android
 
-Rdio
-----
-
-.. embed:: http://www.rdio.com/artist/Mike_Oldfield/album/Amarok/
-
 SlideShare
 ----------
 
@@ -61,4 +56,3 @@ YouTube
 -------
 
 .. embed:: http://www.youtube.com/watch?v=9bZkp7q19f0
-
