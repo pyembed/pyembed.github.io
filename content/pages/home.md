@@ -28,6 +28,15 @@ To report an issue, request an enhancement, or contribute a patch, go to the [Py
 
 ## Release history ##
 
+<<<<<<< HEAD
+=======
+### v1.3.3 ###
+
+*Released 2016-04-16*
+
+Add explicit scheme for YouTube.
+
+>>>>>>> 443f8a3... Remove v1.3.3
 ### v1.3.1 ###
 
 *Released 2015-11-19*
