@@ -63,39 +63,49 @@
     <h1>Standalone usage</h1>
   </div>
 
-    <p>[TOC]</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="hidden-print" role="complementary">
+            <div class="toc">
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a><ul>
+<li><a href="#basics">Basics</a></li>
+<li><a href="#parameters">Parameters</a></li>
+</ul>
+</li>
+</ul>
+</div>
+          </div>
+        </div>
+        <div class="col-md-9">
 <p>PyEmbed can easily be embedded into your own projects.  Embedding content is just a single call:</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pyembed.core</span> <span class="kn">import</span> <span class="n">PyEmbed</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">html</span> <span class="o">=</span> <span class="n">PyEmbed</span><span class="p">()</span><span class="o">.</span><span class="n">embed</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-</pre></div>
-
-
-<h2>Installation</h2>
+<pre><code>&gt;&gt;&gt; from pyembed.core import PyEmbed
+&gt;&gt;&gt; html = PyEmbed().embed(url)
+</code></pre>
+<h2 id="installation">Installation</h2>
 <p>PyEmbed can be installed using <a href="http://www.pip-installer.org/">pip</a>.</p>
-<div class="highlight"><pre><span></span>pip install pyembed
-</pre></div>
-
-
-<h2>Usage</h2>
-<h3>Basics</h3>
+<pre><code>pip install pyembed
+</code></pre>
+<h2 id="usage">Usage</h2>
+<h3 id="basics">Basics</h3>
 <p>As shown above, passing a URL to the <code>embed</code> method will return the HTML to embed.</p>
 <p>For example, this call:</p>
-<div class="highlight"><pre><span></span>&gt;&gt;&gt; PyEmbed().embed(&#39;http://www.youtube.com/watch?v=9bZkp7q19f0&#39;)
-</pre></div>
-
-
+<pre><code>&gt;&gt;&gt; PyEmbed().embed('http://www.youtube.com/watch?v=9bZkp7q19f0')
+</code></pre>
 <p>will result in the following HTML output:</p>
-<div class="highlight"><pre><span></span><span class="nt">&lt;iframe</span> <span class="na">width=</span><span class="s">&quot;480&quot;</span> <span class="na">height=</span><span class="s">&quot;270&quot;</span> <span class="na">src=</span><span class="s">&quot;http://www.youtube.com/embed/9bZkp7q19f0?feature=oembed&quot;</span> <span class="na">frameborder=</span><span class="s">&quot;0&quot;</span> <span class="err">allowfullscreen</span><span class="nt">&gt;&lt;/iframe&gt;</span>
-</pre></div>
-
-
-<h3>Parameters</h3>
+<pre><code>&lt;iframe width="480" height="270" src="http://www.youtube.com/embed/9bZkp7q19f0?feature=oembed" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+</code></pre>
+<h3 id="parameters">Parameters</h3>
 <p>You can control the maximum size of the embedded content with the <code>max_height</code> and / or <code>max_width</code> parameters.  For example:</p>
-<div class="highlight"><pre><span></span>&gt;&gt;&gt; pyembed = PyEmbed()
-&gt;&gt;&gt; url = &#39;http://www.youtube.com/watch?v=9bZkp7q19f0&#39;
+<pre><code>&gt;&gt;&gt; pyembed = PyEmbed()
+&gt;&gt;&gt; url = 'http://www.youtube.com/watch?v=9bZkp7q19f0'
 &gt;&gt;&gt; pyembed.embed(url, max_width = 300)
 &gt;&gt;&gt; pyembed.embed(url, max_width = 300, max_height = 200)
-</pre></div>
+</code></pre></div>
+      </div>
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery.js"></script>
