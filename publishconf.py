@@ -10,7 +10,7 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'http://pyembed.github.io'
+SITEURL = 'https://pyembed.github.io'
 RELATIVE_URLS = False
 
 URL_ENDING = ''
