@@ -102,8 +102,11 @@
 </code></pre>
 <h3 id="pelican">Pelican</h3>
 <p>If you're using <a href="http://docs.getpelican.com/">Pelican</a>, simply add these lines to your pelicanconf.py file:</p>
-<pre><code>from pyembed.markdown import PyEmbedMarkdown
-MARKDOWN = [PyEmbedMarkdown()]
+<pre><code>MARKDOWN = {
+  'extension_configs': {
+    'pyembed.markdown': {}
+  }
+}
 </code></pre>
 <h2 id="syntax">Syntax</h2>
 <h3 id="basics">Basics</h3>
