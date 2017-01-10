@@ -7,15 +7,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="http://pyembed.github.io/theme/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://pyembed.github.io/theme/css/main.css">
+    <link rel="stylesheet" href="https://pyembed.github.io/theme/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pyembed.github.io/theme/css/main.css">
   </head>
 
   <body>
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a href="http://pyembed.github.io/" class="navbar-brand">PyEmbed</a>
+          <a href="https://pyembed.github.io/" class="navbar-brand">PyEmbed</a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -27,31 +27,31 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usage<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="http://pyembed.github.io/usage/standalone/">Standalone</a></li>
+                <li><a href="https://pyembed.github.io/usage/standalone/">Standalone</a></li>
                 <li class="divider"></li>
-                <li><a href="http://pyembed.github.io/usage/markdown/">Markdown</a></li>
-                <li><a href="http://pyembed.github.io/usage/rst/">reStructuredText</a></li>
+                <li><a href="https://pyembed.github.io/usage/markdown/">Markdown</a></li>
+                <li><a href="https://pyembed.github.io/usage/rst/">reStructuredText</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="http://pyembed.github.io/examples/markdown/">Markdown</a></li>
-                <li><a href="http://pyembed.github.io/examples/rst/">reStructuredText</a></li>
+                <li><a href="https://pyembed.github.io/examples/markdown/">Markdown</a></li>
+                <li><a href="https://pyembed.github.io/examples/rst/">reStructuredText</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Customization<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="http://pyembed.github.io/customization/">Introduction</a></li>
+                <li><a href="https://pyembed.github.io/customization/">Introduction</a></li>
                 <li class="divider"></li>
-                <li><a href="http://pyembed.github.io/customization/jinja2/">Jinja2</a></li>
-                <li><a href="http://pyembed.github.io/customization/mustache/">Mustache</a></li>
+                <li><a href="https://pyembed.github.io/customization/jinja2/">Jinja2</a></li>
+                <li><a href="https://pyembed.github.io/customization/mustache/">Mustache</a></li>
               </ul>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://pyembed.github.io/license/">License</a></li>
+            <li><a href="https://pyembed.github.io/license/">License</a></li>
             <li><a href="https://github.com/pyembed/">GitHub</a></li>
           </ul>
         </div>
@@ -63,43 +63,30 @@
     <h1>Customization</h1>
   </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="hidden-print" role="complementary">
-            <div class="toc">
-<ul>
-<li><a href="#using-a-renderer">Using a renderer</a><ul>
-<li><a href="#standalone">Standalone</a></li>
-<li><a href="#markdown">Markdown</a></li>
-<li><a href="#restructuredtext">reStructuredText</a></li>
-</ul>
-</li>
-<li><a href="#creating-a-custom-renderer">Creating a custom renderer</a></li>
-</ul>
-</div>
-          </div>
-        </div>
-        <div class="col-md-9">
+    <p>[TOC]</p>
 <p>PyEmbed allows you to control exactly how content is renderer by supplying a custom renderer.  There are supported renderers that allow you to write templates for your embeddings using <a href="mustache/">Mustache</a> or <a href="jinja2/">Jinja2</a>, or you can write your own renderer.</p>
-<h2 id="using-a-renderer">Using a renderer</h2>
-<h3 id="standalone">Standalone</h3>
+<h2>Using a renderer</h2>
+<h3>Standalone</h3>
 <p>If you're using PyEmbed directly, you can specify a custom renderer as follows:</p>
-<pre><code>&gt;&gt;&gt; html = PyEmbed(renderer=renderer).embed(url)
-</code></pre>
-<h3 id="markdown">Markdown</h3>
+<div class="highlight"><pre><span></span>&gt;&gt;&gt; html = PyEmbed(renderer=renderer).embed(url)
+</pre></div>
+
+
+<h3>Markdown</h3>
 <p>You can pass a custom renderer directly to the <a href="/usage/markdown/">Markdown extension</a>:</p>
-<pre><code>&gt;&gt;&gt; html = markdown.markdown(text, extensions=[PyEmbedMarkdown(renderer=renderer)])
-</code></pre>
-<h3 id="restructuredtext">reStructuredText</h3>
+<div class="highlight"><pre><span></span>&gt;&gt;&gt; html = markdown.markdown(text, extensions=[PyEmbedMarkdown(renderer=renderer)])
+</pre></div>
+
+
+<h3>reStructuredText</h3>
 <p>You can pass a custom renderer directly to the <a href="/usage/rst/">reStructuredText extension</a>:</p>
-<pre><code>&gt;&gt;&gt; PyEmbedRst(renderer=renderer).register()
+<div class="highlight"><pre><span></span>&gt;&gt;&gt; PyEmbedRst(renderer=renderer).register()
 &gt;&gt;&gt; html = publish_string(text)
-</code></pre>
-<h2 id="creating-a-custom-renderer">Creating a custom renderer</h2>
-<p>If you want to create your own renderer, you should extend the <a href="https://github.com/pyembed/pyembed/blob/master/pyembed/core/render.py">PyEmbedRenderer</a> class, overriding the <code>render</code> method.</p></div>
-      </div>
-    </div>
+</pre></div>
+
+
+<h2>Creating a custom renderer</h2>
+<p>If you want to create your own renderer, you should extend the <a href="https://github.com/pyembed/pyembed/blob/master/pyembed/core/render.py">PyEmbedRenderer</a> class, overriding the <code>render</code> method.</p>
     </div>
 
     <script src="https://code.jquery.com/jquery.js"></script>

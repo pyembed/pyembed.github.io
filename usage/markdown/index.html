@@ -7,15 +7,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="http://pyembed.github.io/theme/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://pyembed.github.io/theme/css/main.css">
+    <link rel="stylesheet" href="https://pyembed.github.io/theme/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pyembed.github.io/theme/css/main.css">
   </head>
 
   <body>
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a href="http://pyembed.github.io/" class="navbar-brand">PyEmbed</a>
+          <a href="https://pyembed.github.io/" class="navbar-brand">PyEmbed</a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -27,31 +27,31 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usage<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="http://pyembed.github.io/usage/standalone/">Standalone</a></li>
+                <li><a href="https://pyembed.github.io/usage/standalone/">Standalone</a></li>
                 <li class="divider"></li>
-                <li><a href="http://pyembed.github.io/usage/markdown/">Markdown</a></li>
-                <li><a href="http://pyembed.github.io/usage/rst/">reStructuredText</a></li>
+                <li><a href="https://pyembed.github.io/usage/markdown/">Markdown</a></li>
+                <li><a href="https://pyembed.github.io/usage/rst/">reStructuredText</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="http://pyembed.github.io/examples/markdown/">Markdown</a></li>
-                <li><a href="http://pyembed.github.io/examples/rst/">reStructuredText</a></li>
+                <li><a href="https://pyembed.github.io/examples/markdown/">Markdown</a></li>
+                <li><a href="https://pyembed.github.io/examples/rst/">reStructuredText</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Customization<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="http://pyembed.github.io/customization/">Introduction</a></li>
+                <li><a href="https://pyembed.github.io/customization/">Introduction</a></li>
                 <li class="divider"></li>
-                <li><a href="http://pyembed.github.io/customization/jinja2/">Jinja2</a></li>
-                <li><a href="http://pyembed.github.io/customization/mustache/">Mustache</a></li>
+                <li><a href="https://pyembed.github.io/customization/jinja2/">Jinja2</a></li>
+                <li><a href="https://pyembed.github.io/customization/mustache/">Mustache</a></li>
               </ul>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://pyembed.github.io/license/">License</a></li>
+            <li><a href="https://pyembed.github.io/license/">License</a></li>
             <li><a href="https://github.com/pyembed/">GitHub</a></li>
           </ul>
         </div>
@@ -63,64 +63,53 @@
     <h1>Usage with Markdown</h1>
   </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="hidden-print" role="complementary">
-            <div class="toc">
-<ul>
-<li><a href="#installation">Installation</a></li>
-<li><a href="#usage">Usage</a><ul>
-<li><a href="#standalone">Standalone</a></li>
-<li><a href="#pelican">Pelican</a></li>
-</ul>
-</li>
-<li><a href="#syntax">Syntax</a><ul>
-<li><a href="#basics">Basics</a></li>
-<li><a href="#parameters">Parameters</a></li>
-</ul>
-</li>
-</ul>
-</div>
-          </div>
-        </div>
-        <div class="col-md-9">
+    <p>[TOC]</p>
 <p>PyEmbed is available as an extension to <a href="http://pythonhosted.org/Markdown/">Python-Markdown</a>.  Embedding content is then a simple matter of using the special <code>[!embed]</code> link tag.  For example:</p>
-<pre><code>[!embed](http://www.youtube.com/watch?v=9bZkp7q19f0)
-</code></pre>
+<div class="highlight"><pre><span></span>[!embed](http://www.youtube.com/watch?v=9bZkp7q19f0)
+</pre></div>
+
+
 <p>More examples can be seen on the <a href="/examples/markdown/">examples page</a>.</p>
-<h2 id="installation">Installation</h2>
+<h2>Installation</h2>
 <p>PyEmbed-Markdown can be installed using <a href="http://www.pip-installer.org/">pip</a>.</p>
-<pre><code>pip install pyembed-markdown
-</code></pre>
-<h2 id="usage">Usage</h2>
-<h3 id="standalone">Standalone</h3>
+<div class="highlight"><pre><span></span>pip install pyembed-markdown
+</pre></div>
+
+
+<h2>Usage</h2>
+<h3>Standalone</h3>
 <p>PyEmbed-Markdown can be passed as a standard extension to Python-Markdown:</p>
-<pre><code>&gt;&gt;&gt; import markdown
-&gt;&gt;&gt; from pyembed.markdown import PyEmbedMarkdown
-&gt;&gt;&gt; html = markdown.markdown(text, extensions=[PyEmbedMarkdown()])
-</code></pre>
-<h3 id="pelican">Pelican</h3>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">markdown</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pyembed.markdown</span> <span class="kn">import</span> <span class="n">PyEmbedMarkdown</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">html</span> <span class="o">=</span> <span class="n">markdown</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">extensions</span><span class="o">=</span><span class="p">[</span><span class="n">PyEmbedMarkdown</span><span class="p">()])</span>
+</pre></div>
+
+
+<h3>Pelican</h3>
 <p>If you're using <a href="http://docs.getpelican.com/">Pelican</a>, simply add these lines to your pelicanconf.py file:</p>
-<pre><code>from pyembed.markdown import PyEmbedMarkdown
-MD_EXTENSIONS = [PyEmbedMarkdown()]
-</code></pre>
-<h2 id="syntax">Syntax</h2>
-<h3 id="basics">Basics</h3>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyembed.markdown</span> <span class="kn">import</span> <span class="n">PyEmbedMarkdown</span>
+<span class="n">MD_EXTENSIONS</span> <span class="o">=</span> <span class="p">[</span><span class="n">PyEmbedMarkdown</span><span class="p">()]</span>
+</pre></div>
+
+
+<h2>Syntax</h2>
+<h3>Basics</h3>
 <p>The default syntax for embedding is to create a link with text <code>!embed</code>, and the URL of the content to embed.</p>
 <p>For example, this source:</p>
-<pre><code>[!embed](http://www.youtube.com/watch?v=9bZkp7q19f0)
-</code></pre>
+<div class="highlight"><pre><span></span>[!embed](http://www.youtube.com/watch?v=9bZkp7q19f0)
+</pre></div>
+
+
 <p>will result in the following HTML output:</p>
-<pre><code>&lt;iframe width="480" height="270" src="http://www.youtube.com/embed/9bZkp7q19f0?feature=oembed" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
-</code></pre>
-<h3 id="parameters">Parameters</h3>
+<div class="highlight"><pre><span></span><span class="nt">&lt;iframe</span> <span class="na">width=</span><span class="s">&quot;480&quot;</span> <span class="na">height=</span><span class="s">&quot;270&quot;</span> <span class="na">src=</span><span class="s">&quot;http://www.youtube.com/embed/9bZkp7q19f0?feature=oembed&quot;</span> <span class="na">frameborder=</span><span class="s">&quot;0&quot;</span> <span class="err">allowfullscreen</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+</pre></div>
+
+
+<h3>Parameters</h3>
 <p>You can control the maximum size of the embedded content with the <code>max_height</code> and / or <code>max_width</code> parameters.  For example:</p>
-<pre><code>[!embed?max_width=300](http://www.youtube.com/watch?v=9bZkp7q19f0)
+<div class="highlight"><pre><span></span>[!embed?max_width=300](http://www.youtube.com/watch?v=9bZkp7q19f0)
 [!embed?max_width=300&amp;max_height=200](http://www.youtube.com/watch?v=9bZkp7q19f0)
-</code></pre></div>
-      </div>
-    </div>
+</pre></div>
     </div>
 
     <script src="https://code.jquery.com/jquery.js"></script>

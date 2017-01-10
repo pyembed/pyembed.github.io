@@ -7,15 +7,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="http://pyembed.github.io/theme/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://pyembed.github.io/theme/css/main.css">
+    <link rel="stylesheet" href="https://pyembed.github.io/theme/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pyembed.github.io/theme/css/main.css">
   </head>
 
   <body>
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a href="http://pyembed.github.io/" class="navbar-brand">PyEmbed</a>
+          <a href="https://pyembed.github.io/" class="navbar-brand">PyEmbed</a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -27,31 +27,31 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usage<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="http://pyembed.github.io/usage/standalone/">Standalone</a></li>
+                <li><a href="https://pyembed.github.io/usage/standalone/">Standalone</a></li>
                 <li class="divider"></li>
-                <li><a href="http://pyembed.github.io/usage/markdown/">Markdown</a></li>
-                <li><a href="http://pyembed.github.io/usage/rst/">reStructuredText</a></li>
+                <li><a href="https://pyembed.github.io/usage/markdown/">Markdown</a></li>
+                <li><a href="https://pyembed.github.io/usage/rst/">reStructuredText</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="http://pyembed.github.io/examples/markdown/">Markdown</a></li>
-                <li><a href="http://pyembed.github.io/examples/rst/">reStructuredText</a></li>
+                <li><a href="https://pyembed.github.io/examples/markdown/">Markdown</a></li>
+                <li><a href="https://pyembed.github.io/examples/rst/">reStructuredText</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Customization<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="http://pyembed.github.io/customization/">Introduction</a></li>
+                <li><a href="https://pyembed.github.io/customization/">Introduction</a></li>
                 <li class="divider"></li>
-                <li><a href="http://pyembed.github.io/customization/jinja2/">Jinja2</a></li>
-                <li><a href="http://pyembed.github.io/customization/mustache/">Mustache</a></li>
+                <li><a href="https://pyembed.github.io/customization/jinja2/">Jinja2</a></li>
+                <li><a href="https://pyembed.github.io/customization/mustache/">Mustache</a></li>
               </ul>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://pyembed.github.io/license/">License</a></li>
+            <li><a href="https://pyembed.github.io/license/">License</a></li>
             <li><a href="https://github.com/pyembed/">GitHub</a></li>
           </ul>
         </div>
@@ -63,23 +63,13 @@
     <h1>Customization with Jinja2</h1>
   </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="hidden-print" role="complementary">
-            <div class="toc">
-<ul>
-<li><a href="#usage">Usage</a></li>
-<li><a href="#available-parameters">Available parameters</a></li>
-</ul>
-</div>
-          </div>
-        </div>
-        <div class="col-md-9">
+    <p>[TOC]</p>
 <p>PyEmbed allows you to control how embeddings are rendered using Jinja2 templates.  For example, if you want to include the thumbnail image when embedding a link, you could use a template like this:</p>
-<pre><code>&lt;a href="{{content_url}}"&gt;&lt;img src="{{thumbnail_url}}" /&gt;&lt;/a&gt;
-</code></pre>
-<h2 id="usage">Usage</h2>
+<div class="highlight"><pre><span></span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;</span><span class="cp">{{</span><span class="nv">content_url</span><span class="cp">}}</span><span class="s">&quot;</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">&quot;</span><span class="cp">{{</span><span class="nv">thumbnail_url</span><span class="cp">}}</span><span class="s">&quot;</span> <span class="nt">/&gt;&lt;/a&gt;</span>
+</pre></div>
+
+
+<h2>Usage</h2>
 <p>In order to use the Jinja2 renderer, you must create a directory containing template files for each type of OEmbed resource.  These files must be named:</p>
 <ul>
 <li>link.html</li>
@@ -88,142 +78,142 @@
 <li>video.html</li>
 </ul>
 <p>You can then create the renderer as follows:</p>
-<pre><code>&gt;&gt;&gt; from pyembed.jinja2 import Jinja2Renderer
-&gt;&gt;&gt; renderer = Jinja2Renderer(path_to_template_dir)
-</code></pre>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pyembed.jinja2</span> <span class="kn">import</span> <span class="n">Jinja2Renderer</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">renderer</span> <span class="o">=</span> <span class="n">Jinja2Renderer</span><span class="p">(</span><span class="n">path_to_template_dir</span><span class="p">)</span>
+</pre></div>
+
+
 <p>For more information on how to use the renderer, see the <a href="../">introduction to customization</a>.</p>
-<h2 id="available-parameters">Available parameters</h2>
+<h2>Available parameters</h2>
 <p>The table below shows which parameters are available for each response type.  For more information, see section 2.3.4 of the <a href="http://oembed.com">OEmbed spec</a>.</p>
 <p>The exception is the first parameter, <code>content_url</code>, which contains the URL that was requested to be embedded.</p>
 <div class="table-responsive">
-<table class="table table-bordered">
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Link</th>
-<th>Photo</th>
-<th>Rich</th>
-<th>Video</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>content_url</td>
-<td class="success">Required</td>
-<td class="success">Required</td>
-<td class="success">Required</td>
-<td class="success">Required</td>
-</tr>
-<tr>
-<td>type</td>
-<td class="success">Required</td>
-<td class="success">Required</td>
-<td class="success">Required</td>
-<td class="success">Required</td>
-</tr>
-<tr>
-<td>version</td>
-<td class="success">Required</td>
-<td class="success">Required</td>
-<td class="success">Required</td>
-<td class="success">Required</td>
-</tr>
-<tr>
-<td>title</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-</tr>
-<tr>
-<td>author_name</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-</tr>
-<tr>
-<td>author_url</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-</tr>
-<tr>
-<td>provider_name</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-</tr>
-<tr>
-<td>provider_url</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-</tr>
-<tr>
-<td>cache_age</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-</tr>
-<tr>
-<td>thumbnail_url</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-</tr>
-<tr>
-<td>thumbnail_width</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-</tr>
-<tr>
-<td>thumbnail_height</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-<td class="warning">Optional</td>
-</tr>
-<tr>
-<td>url</td>
-<td class="danger">Not present</td>
-<td class="success">Required</td>
-<td class="danger">Not present</td>
-<td class="danger">Not present</td>
-</tr>
-<tr>
-<td>width</td>
-<td class="danger">Not present</td>
-<td class="success">Required</td>
-<td class="success">Required</td>
-<td class="success">Required</td>
-</tr>
-<tr>
-<td>height</td>
-<td class="danger">Not present</td>
-<td class="success">Required</td>
-<td class="success">Required</td>
-<td class="success">Required</td>
-</tr>
-<tr>
-<td>html</td>
-<td class="danger">Not present</td>
-<td class="danger">Not present</td>
-<td class="success">Required</td>
-<td class="success">Required</td>
-</tr>
-</tbody>
-</table>
-</div></div>
-      </div>
-    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Link</th>
+                <th>Photo</th>
+                <th>Rich</th>
+                <th>Video</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>content_url</td>
+                <td class="success">Required</td>
+                <td class="success">Required</td>
+                <td class="success">Required</td>
+                <td class="success">Required</td>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td class="success">Required</td>
+                <td class="success">Required</td>
+                <td class="success">Required</td>
+                <td class="success">Required</td>
+            </tr>
+            <tr>
+                <td>version</td>
+                <td class="success">Required</td>
+                <td class="success">Required</td>
+                <td class="success">Required</td>
+                <td class="success">Required</td>
+            </tr>
+            <tr>
+                <td>title</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+            </tr>
+            <tr>
+                <td>author_name</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+            </tr>
+            <tr>
+                <td>author_url</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+            </tr>
+            <tr>
+                <td>provider_name</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+            </tr>
+            <tr>
+                <td>provider_url</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+            </tr>
+            <tr>
+                <td>cache_age</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+            </tr>
+            <tr>
+                <td>thumbnail_url</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+            </tr>
+            <tr>
+                <td>thumbnail_width</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+            </tr>
+            <tr>
+                <td>thumbnail_height</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+                <td class="warning">Optional</td>
+            </tr>
+            <tr>
+                <td>url</td>
+                <td class="danger">Not present</td>
+                <td class="success">Required</td>
+                <td class="danger">Not present</td>
+                <td class="danger">Not present</td>
+            </tr>
+            <tr>
+                <td>width</td>
+                <td class="danger">Not present</td>
+                <td class="success">Required</td>
+                <td class="success">Required</td>
+                <td class="success">Required</td>
+            </tr>
+            <tr>
+                <td>height</td>
+                <td class="danger">Not present</td>
+                <td class="success">Required</td>
+                <td class="success">Required</td>
+                <td class="success">Required</td>
+            </tr>
+            <tr>
+                <td>html</td>
+                <td class="danger">Not present</td>
+                <td class="danger">Not present</td>
+                <td class="success">Required</td>
+                <td class="success">Required</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
     </div>
 
     <script src="https://code.jquery.com/jquery.js"></script>
