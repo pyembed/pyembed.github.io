@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>    PyEmbed - Simple content embedding for Python
-</title>
+    <title>PyEmbed</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,60 +58,12 @@
     </div>
 
     <div class="container">
-  <div class="page-header">
-    <h1>Simple content embedding for Python</h1>
-  </div>
+<section id="content">
+<h2>All articles</h2>
 
-    <p>[TOC]</p>
-<p>PyEmbed is a Python library that allows you to easily embed content on your website from a wide variety of sources (including <a href="http://flickr.com/">Flickr</a>, <a href="http://twitter.com/">Twitter</a> and <a href="http://youtube.com/">YouTube</a>).  It uses the <a href="http://www.oembed.com/">oEmbed</a> standard to discover how to represent the resource on your website.</p>
-<h2>Key features</h2>
-<ul>
-<li>Zero configuration - just supply the URL that you want to embed content from.</li>
-<li>Support for <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and <a href="http://docutils.sourceforge.net/rst.html">reStructuredText</a>.</li>
-<li>Works with static site generators, including <a href="http://docs.getpelican.com">Pelican</a>.</li>
-<li>Fully customizable embeddings, with support for <a href="http://jinja.pocoo.org/">Jinja2</a>
- and <a href="http://mustache.github.io/">Mustache</a>.</li>
-</ul>
-<h2>Getting started</h2>
-<p>PyEmbed comes with out-of-the-box support for Markdown and reStructuredText, or you can embed it in your own applications.  See the Usage section on the navigation bar for more information.</p>
-<h2>Compatibility</h2>
-<p>PyEmbed has been tested with Python 2.7, 3.3 and 3.4.</p>
-<h2>Contributing</h2>
-<p>To report an issue, request an enhancement, or contribute a patch, go to the <a href="https://github.com/pyembed/">PyEmbed GitHub page</a>.</p>
-<h2>Release history</h2>
-<h3>v1.3.3</h3>
-<p><em>Released 2016-04-16</em></p>
-<p>Add explicit scheme for YouTube.</p>
-<h3>v1.3.1</h3>
-<p><em>Released 2015-11-19</em></p>
-<p>Handle downtime of provider list.</p>
-<h3>v1.3.0</h3>
-<p><em>Released 2015-09-05</em></p>
-<p>Improved performance by reordering the discovery algorithm.</p>
-<h3>v1.2.3</h3>
-<p><em>Released 2015-08-27</em></p>
-<p>Don't hit the list of providers until necessary.</p>
-<h3>v1.2.2</h3>
-<p><em>Released 2015-08-15</em></p>
-<p>Fix another Beautiful Soup warning.</p>
-<h3>v1.2.1</h3>
-<p><em>Released 2015-08-15</em></p>
-<p>Fix Beautiful Soup warning.</p>
-<h3>v1.2.0</h3>
-<p><em>Released 2015-08-12</em></p>
-<p>Use <a href="http://oembed.com/providers.json">official list of providers</a>.</p>
-<h3>v1.1.2</h3>
-<p><em>Released 2015-01-03</em></p>
-<p>Allow overriding the templates in the default renderer.</p>
-<h3>v1.1.1</h3>
-<p><em>Released 2014-09-02</em></p>
-<p>Fixed bug with embedding from SoundCloud.</p>
-<h3>v1.1.0</h3>
-<p><em>Released 2014-08-02</em></p>
-<p>This release adds support for more providers.  These are statically configured based on the list in the <a href="http://oembed.com">oEmbed spec</a>.</p>
-<h3>v1.0.0</h3>
-<p><em>Released 2014-02-05</em></p>
-<p>Initial stable release.</p>
+<ol id="post-list">
+</ol><!-- /#posts-list -->
+</section><!-- /#content -->
     </div>
 
     <script src="https://code.jquery.com/jquery.js"></script>
