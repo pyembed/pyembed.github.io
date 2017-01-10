@@ -21,7 +21,13 @@ DEFAULT_PAGINATION = False
 
 THEME = 'theme'
 
-MD_EXTENSIONS = [PyEmbedMarkdown(), 'toc']
+MARKDOWN = {
+  'extension_configs': {
+    'markdown.extensions.toc': {},
+    'pyembed.markdown': {}
+  }
+}
+
 PyEmbedRst().register()
 
 PLUGIN_PATHS = ['plugins']

@@ -30,8 +30,11 @@ PyEmbed-Markdown can be passed as a standard extension to Python-Markdown:
 
 If you're using [Pelican](http://docs.getpelican.com/), simply add these lines to your pelicanconf.py file:
 
-    from pyembed.markdown import PyEmbedMarkdown
-    MD_EXTENSIONS = [PyEmbedMarkdown()]
+    MARKDOWN = {
+      'extension_configs': {
+        'pyembed.markdown': {}
+      }
+    }
 
 ## Syntax ##
 
